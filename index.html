@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Class Website</a>
+        <a class="navbar-brand" href="#">CHYK REPO</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -38,6 +38,108 @@
             ];
             homeworkItems.forEach(item => {
                 const li = document.createElement('li');
+                li.textContent = item;
+                homeworkList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHYK Repo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 56px;
+        }
+        .jumbotron {
+            background-color: #f8f9fa;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .card-columns {
+            column-count: 1;
+        }
+        @media (min-width: 576px) {
+            .card-columns {
+                column-count: 2;
+            }
+        }
+        @media (min-width: 768px) {
+            .card-columns {
+                column-count: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">CHYK REPO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="notes.html">Weekly Notes</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">CHYK Repository</h1>
+            <p class="lead text-muted">This site is for archiving the weekly CHYK classes.</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <h2>Resources</h2>
+                <p>The resources tab provides all the material you will need to chant during the class.</p>
+                <a href="resources.html" class="btn btn-primary">View Resources</a>
+            </div>
+            <div class="col-md-6">
+                <h2>Weekly Notes</h2>
+                <p>The weekly notes tab provides links to summaries of each week (starting 26/5/2024).</p>
+                <a href="notes.html" class="btn btn-primary">View Weekly Notes</a>
+            </div>
+        </div>
+        <div id="homework" class="mt-4">
+            <h2>Homework</h2>
+            <p>Upcoming homework for 2/6/2024</p>
+            <ul id="homework-list" class="list-group">
+                <!-- Homework items will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+    <footer class="footer bg-light py-4 mt-4">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 CHYK REPO</span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript to dynamically add homework reminders
+        document.addEventListener('DOMContentLoaded', () => {
+            const homeworkList = document.getElementById('homework-list');
+            const homeworkItems = [
+                'Week 1: Homework Description',
+                'Week 2: Homework Description',
+                // Add more homework items as needed
+            ];
+            homeworkItems.forEach(item => {
+                const li = document.createElement('li');
+                li.classList.add('list-group-item');
                 li.textContent = item;
                 homeworkList.appendChild(li);
             });
