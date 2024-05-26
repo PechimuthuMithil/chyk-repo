@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Website</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Class Website</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="notes.html">Weekly Notes</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <h1>Welcome to the Class Website</h1>
+        <p>This site provides homework reminders, resources, and weekly notes.</p>
+        <div id="homework" class="mt-4">
+            <h2>Homework</h2>
+            <p>Every Sunday, the homework for the next Sunday will be released here.</p>
+            <ul id="homework-list">
+                <!-- Homework items will be listed here -->
+            </ul>
+        </div>
+    </div>
+    <script>
+        // JavaScript to dynamically add homework reminders
+        document.addEventListener('DOMContentLoaded', () => {
+            const homeworkList = document.getElementById('homework-list');
+            const homeworkItems = [
+                'Week 1: Homework Description',
+                'Week 2: Homework Description',
+                // Add more homework items as needed
+            ];
+            homeworkItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                homeworkList.appendChild(li);
+            });
+        });
+    </script>
+</body>
+</html>
