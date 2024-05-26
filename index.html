@@ -3,45 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHYK Repo</title>
+    <title>CHYK Repository</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 60px;
+        }
+        .card {
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 1.5rem;
+        }
+        .jumbotron {
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            background-color: #e9ecef;
+            border-radius: 0.3rem;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">CHYK REPO</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
-                <li class="nav-item"><a class="nav-link" href="notes.html">Weekly Notes</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">CHYK REPO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="notes.html">Weekly Notes</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="container mt-4">
-        <h1>CHYK Repository</h1>
-        <p>This site is for archiving the weekly CHYK classes.</p><br>
-        <p>Resources: The resources tab provides all the material you will need to chant during the class.</p>
-        <p>Weekly Notes: The weekly notes tab provides links to sumarries of a week (starting 26/5/2024)</p>
-        <div id="homework" class="mt-4">
-            <h2>Homework</h2>
-            <p>Upcoming homework for 2/6/2024</p>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">CHYK REPOSITORY</h1>
+            <p class="lead">This site is for archiving the weekly CHYK classes.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card border-primary">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Homework</h5>
+                        <p class="card-text"><strong>Last Updated:</strong> <span id="last-updated">26/5/2024</span></p>
+                        <p class="card-text"><strong>Due Date:</strong> <span id="due-date">2/6/2024</span></p>
+                        <p class="card-text"><strong>Details:</strong> <span id="homework-details">Complete the assignment on Chapter 5.</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-success">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Resources</h5>
+                        <p class="card-text">The resources tab provides all the material you will need to chant during the class. You can find PDFs, photographs, and more.</p>
+                        <p class="card-text"><strong>Contribute:</strong> To contribute, please upload your files in the resources section or contact the admin.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-info">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Weekly Notes</h5>
+                        <p class="card-text">The weekly notes tab provides links to summaries of each week's classes. You can access PDF notes and review past classes.</p>
+                        <p class="card-text"><strong>Contribute:</strong> To add notes, please submit your documents in the weekly notes section or get in touch with the admin.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script>
-        // JavaScript to dynamically add homework reminders
-        document.addEventListener('DOMContentLoaded', () => {
-            const homeworkList = document.getElementById('homework-list');
-            const homeworkItems = [
-                'Week 1: Homework Description',
-                'Week 2: Homework Description',
-                // Add more homework items as needed
-            ];
-            homeworkItems.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = item;
-                homeworkList.appendChild(li);
-            });
-        });
-    </script>
+    <footer class="footer bg-light py-4 mt-4">
+        <div class="container text-center">
+            <span class="text-muted">© 2024 CHYK REPO</span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
