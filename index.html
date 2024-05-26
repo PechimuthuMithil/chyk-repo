@@ -6,6 +6,7 @@
     <title>CHYK Repository</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             padding-top: 60px;
@@ -24,6 +25,9 @@
         .card-title {
             font-size: 1.5rem;
             font-family: 'Lora', serif;
+        }
+        .card-text {
+            font-size: 1rem;
         }
         .footer {
             background-color: #f8f9fa;
@@ -56,17 +60,17 @@
             <div class="col-md-4">
                 <div class="card border-primary">
                     <div class="card-body">
-                        <h5 class="card-title text-primary">Homework</h5>
-                        <p class="card-text"><strong>Last Updated:</strong> <span id="last-updated">26/5/2024</span></p>
-                        <p class="card-text"><strong>Due Date:</strong> <span id="due-date">2/6/2024</span></p>
-                        <p class="card-text"><strong>Details:</strong> <span id="homework-details">Complete the assignment on Chapter 5.</span></p>
+                        <h5 class="card-title text-primary"><i class="fas fa-tasks"></i> Homework</h5>
+                        <p class="card-text"><i class="fas fa-calendar-alt"></i> <strong>Last Updated:</strong> <span id="last-updated" class="text-muted">26/5/2024</span></p>
+                        <p class="card-text"><i class="fas fa-calendar-day"></i> <strong>Due Date:</strong> <span id="due-date" class="text-danger">2/6/2024</span></p>
+                        <p class="card-text"><i class="fas fa-book"></i> <strong>Details:</strong> <span id="homework-details" class="font-italic text-dark"><strong>Read about verses 48, 49, and 50 from chapter II of the Bhagavad Geeta</strong></span></p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card border-success">
                     <div class="card-body">
-                        <h5 class="card-title text-success">Resources</h5>
+                        <h5 class="card-title text-success"><i class="fas fa-book-open"></i> Resources</h5>
                         <p class="card-text">The resources tab provides all the material you will need to chant during the class. You can find PDFs, photographs, and more.</p>
                         <p class="card-text"><strong>Contribute:</strong> To contribute, please upload your files in the resources section or contact the admin.</p>
                     </div>
@@ -75,7 +79,7 @@
             <div class="col-md-4">
                 <div class="card border-info">
                     <div class="card-body">
-                        <h5 class="card-title text-info">Weekly Notes</h5>
+                        <h5 class="card-title text-info"><i class="fas fa-sticky-note"></i> Weekly Notes</h5>
                         <p class="card-text">The weekly notes tab provides links to summaries of each week's classes. You can access PDF notes and review past classes.</p>
                         <p class="card-text"><strong>Contribute:</strong> To add notes, please submit your documents in the weekly notes section or get in touch with the admin.</p>
                     </div>
@@ -85,7 +89,7 @@
     </div>
     <footer class="footer bg-light text-center">
         <div class="container">
-            <span class="text-muted">© 2024 CHYK REPO</span>
+            <span class="text-muted">Maintained by CHYK - HSR</span>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
